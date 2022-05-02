@@ -9,18 +9,23 @@ The model will only output stance percentage (which you can map to torque) and s
 
 ## IMU transformations:
 Signals need to be scaled to the proper units:
+
 ACCEL_GAIN = 1 / 8192  # LSB -> gs
 GYRO_GAIN = 1 / 32.75  # LSB -> deg/s
+
 *IMU conversions inferred from https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/
 
 
 Accelerometer and gyro axes will need to be reoriented, and this will depend on your exoboot model.
 Follow these rules: 
-    Positive XYZ axes should point forwards, upwards, and outwards (laterally) for both sides.
-    Accelerations/gyros follow right hand rule on the right side, and left hand rule on the left side. 
+
+-Positive XYZ axes should point forwards, upwards, and outwards (laterally) for both sides.
+
+-Accelerations/gyros follow right hand rule on the right side, and left hand rule on the left side. 
 
 ## Ankle angle transformations:
 Signals need to be converted to degrees:
+
 ENC_CLICKS_TO_DEG = 1/(2**14/360)
 
 Angles need to be zeroed such that ankle_angle = 0 when the strut and boot are roughly perpendicular (close to neutral standing posture).  This will be unique to your system.
