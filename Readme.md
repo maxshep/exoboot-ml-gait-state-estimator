@@ -11,7 +11,7 @@ The model will only output stance percentage (which you can map to torque) and s
 Signals need to be scaled to the proper units:
 ACCEL_GAIN = 1 / 8192  # LSB -> gs
 GYRO_GAIN = 1 / 32.75  # LSB -> deg/s
-#IMU conversions inferred from https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/
+*IMU conversions inferred from https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/
 
 
 Accelerometer and gyro axes will need to be reoriented, and this will depend on your exoboot model.
