@@ -1,10 +1,11 @@
 ## Overview:
-This repo contains the model for our submission to RAL (to be linked to here: )
+This repo contains the model for our submission to RAL (https://ieeexplore.ieee.org/document/9699101)
 
 
 ## Pseudo-code for IMU and ankle angle transformations:
 
-# IMU conversions inferred from https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/
+#IMU conversions inferred from https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/
+
 ACCEL_GAIN = 1 / 8192  # LSB -> gs
 GYRO_GAIN = 1 / 32.75  # LSB -> deg/s
 ENC_CLICKS_TO_DEG = 1/(2**14/360)
